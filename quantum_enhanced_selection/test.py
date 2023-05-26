@@ -1,6 +1,9 @@
 import unittest
 
-from quantum_enhanced_selection.tests.test_example import TestExample
+from tests.test_example import TestExample
+from tests.test_selection import TestSelection
+from tests.test_qubo import TestQubo
+from tests.test_genetic import TestGenetic
 
 
 class CountSuite(object):
@@ -18,6 +21,9 @@ def suite():
     s = CountSuite()
 
     s.add(TestExample)
+    s.add(TestSelection)
+    s.add(TestGenetic)
+    s.add(TestQubo)
 
     return s.s
 
